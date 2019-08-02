@@ -5,7 +5,7 @@ Quick scaffolding of S3 hosted RocketBoost static pages.
 To deploy changes to s3 run:
 ```sh
 $ npm run build
-$ aws s3 sync ./build s3://<bucket>/<path> [--profile <profile>]
+$ aws s3 sync ./build s3://<bucket>/<path> --delete [--profile <profile>]
 ``` 
 
 ## Development
