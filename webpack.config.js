@@ -27,13 +27,22 @@ module.exports = {
       exclude: /node_modules/
     },
     {
-        test: /\.s?css/i,
-        use : [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+      test: /\.s?css/i,
+      use : [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader'
+      ]
+    },
+    {
+      test: /\.(html)$/,
+      use: {
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+          interpolate: true
+        }
       }
-    ]
+    }]
   },
 };
