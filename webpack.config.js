@@ -30,7 +30,7 @@ module.exports = {
       test: /\.s?css/i,
       use : [
         MiniCssExtractPlugin.loader,
-        'css-loader',
+        { loader: 'css-loader', options: { url: false } },
         'sass-loader'
       ]
     },
@@ -40,7 +40,8 @@ module.exports = {
         loader: 'html-loader',
         options: {
           minimize: true,
-          interpolate: true
+          interpolate: true,
+          attrs: false
         }
       }
     }]
